@@ -30,7 +30,7 @@ def calculDate(list_date):
                     print(date_actuelle-timedelta(days=365*int(verif_year[0][0])))
                     date_calcul = date_actuelle-timedelta(days=365*int(verif_year[0][0]))
             except ValueError:#Soustraction d'un seul
-                date_calcul = date_actuelle-timedelta(days=365*int(verif_year[0][0]))
+                date_calcul = date_actuelle-timedelta(days=365)
                 print(date_actuelle-timedelta(days=365))
                 
         elif len(verif_month) != 0:
@@ -39,7 +39,7 @@ def calculDate(list_date):
                     print(date_actuelle-timedelta(days=30*int(verif_month[0][0])))
                     date_calcul = date_actuelle-timedelta(days=30*int(verif_month[0][0]))
             except ValueError:#Soustraction d'un seul
-                date_calcul = date_actuelle-timedelta(days=30*int(verif_month[0][0]))
+                date_calcul = date_actuelle-timedelta(days=30)
                 print(date_actuelle-timedelta(days=30))
         elif len(verif_week) != 0:
             try:
@@ -47,7 +47,7 @@ def calculDate(list_date):
                     print(date_actuelle-timedelta(days=7*int(verif_week[0][0])))
                     date_calcul = date_actuelle-timedelta(days=7*int(verif_week[0][0]))
             except ValueError:#Soustraction d'un seul
-                date_actuelle-timedelta(days=7*int(verif_month[0][0]))
+                date_actuelle-timedelta(days=7)
                 print(date_actuelle-timedelta(days=7))
         elif len(verif_days) != 0:
             try:
@@ -55,7 +55,7 @@ def calculDate(list_date):
                     date_calcul = date_actuelle-timedelta(days=int(verif_days[0][0]))
                     print(date_actuelle-timedelta(days=int(verif_days[0][0])))
             except ValueError:#Soustraction d'un seul
-                date_calcul = date_actuelle-timedelta(days=int(verif_days[0][0]))
+                date_calcul = date_actuelle-timedelta(days=1)
                 print(date_actuelle-timedelta(days=1))
         else:
             print("aucune correspondance")
