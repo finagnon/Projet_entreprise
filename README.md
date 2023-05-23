@@ -31,7 +31,7 @@ Dans notre scrapping,
 - `scrapping.ipynb`: permet d'avoir tous les informations necessaires (les services publics, la localisation des services, le nom de l'auteur de l'avis, les commentaires, date de publication du commentaire, le nombre d'étoile associé au commentaire)
 
 Avant de commencer à lancer tous ses fichiers, assurez-vous d'avoir installer les dependances nécessaires en faisant :
-- Installer python [Python]((https://www.python.org/downloads/) "Allez sur le site python pour vous dirigez")  (vous pouvez aussi utiliser `anaconda`)
+- Installer python [Python](https://www.python.org/downloads/ "Allez sur le site python pour vous dirigez")  (vous pouvez aussi utiliser `anaconda`)
 - Créer un environnement virtuel `python -m venv .venv` (.venv : c'est le nom donner à un environnement donc vous pouvez toute fois le changer)
 - Activer l'environnement `.venv\Scripts\Activate` - N'oubliez pas de changer le nom `.venv`  si c'est pas le cas chez vous)
 - Exécuter la commandes : `pip install -r requirements.txt` pour installer les resources
