@@ -24,7 +24,7 @@ Dans notre scrapping,
 # regions_liens.csv (contenant les liens des regions), services.csv (contenant tous les servivces)
 
 
-# ************************ ETAPES *******************************
+# ************************** ETAPES *********************************
  ------>Les fichiers à exectuer par étapes:  
 - `servics.ipynb` : permet d'extraire le nom de tous les services qui sont dans le fichier `./Data/export-experiences.csv`  
 - `scrapperNomLien.ipynb` : permet de recherche tous les 13 regions de France qui sont dans le fichier `./Data/regions.csv`, récuperer leurs `URL`et les enregistres maintenant dans le fichier `regions_liens.csv`
