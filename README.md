@@ -26,11 +26,9 @@ Dans notre scrapping,
 
 # **************ETAPES : *************************************************
  ------>Les fichiers à exectuer par étapes:  
-fichier: "services.ipynb" = pour afficher tous les services qui feront l'objet du travail  
-fichier : "scrapperNomLien.ipynb = pour récuperer les liens et les stockés "Nb: ça se fait automatiquement"  
-- "servics.ipynb" : permet d'extraire le nom de tous les services qui sont dans le fichier `./Data/export-experiences.csv`  
-- `scrapperNomLien.ipynb` : permet de recherche tous les 13 regions de France qui sont les 
-fichier : "scrapping.ipynb = pour recuperer le csv d'un service selon la region défini.  
+- `servics.ipynb` : permet d'extraire le nom de tous les services qui sont dans le fichier `./Data/export-experiences.csv`  
+- `scrapperNomLien.ipynb` : permet de recherche tous les 13 regions de France qui sont dans le fichier `./Data/regions.csv`, récuperer leurs `URL`et les enregistres maintenant dans le fichier `regions_liens.csv`
+- `scrapping.ipynb`: permet d'avoir tous les informations necessaires (les services publics, la localisation des services, le nom de l'auteur de l'avis, les commentaires, date de publication du commentaire, le nombre d'étoile associé au commentaire)
 
 Avant de commencer à lancer tous ses fichiers, assurez-vous d'avoir installer les dependances nécessaires en faisant :
 - Installer python `pip install python` (vous pouvez aussi utiliser `anaconda`
