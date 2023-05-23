@@ -35,6 +35,7 @@ Dans notre scrapping,
 Avant de commencer à lancer tous ses fichiers, assurez-vous d'avoir installer les dependances nécessaires en faisant :
 - Installer python `pip install python` (vous pouvez aussi utiliser `anaconda`
 - Créer un environnement virtuel `python -m venv .venv` (.venv : c'est le nom donner à un environnement donc vous pouvez toute fois le changer)
+- Activer l'environnement `.venv\Scripts\Activate` - N'oubliez pas de changer le nom `.venv`  si c'est pas le cas chez vous)
 - Exécuter la commandes : `pip install -r requirements.txt` pour installer les resources
 - Lancer le fichier `scrapping.ipynb` qui permet de scrapper tous les services.
 
