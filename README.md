@@ -31,7 +31,15 @@
             fichier : "scrapperNomLien.ipynb = pour récuperer les liens et les stockés "Nb: ça se fait automatiquement"
             fichier : "scrapping.ipynb = pour recuperer le csv d'un service selon la region défini.
 
+*******************************LES BIBLIOTHEQUES ******************************************
+## Nous avons utilisé ces bibliothèques pour faire le scraping:
 
+# selenium
+    -->ce qui nous permet d'automatiser les actions sur les navigations web et extraire les données.
+# BeautifulSoup
+    --> nous permet d'extraire les données à partir de goggle reviews.
+# pandas
+    --> nous permet de lire les fichier csv
 
 
 
