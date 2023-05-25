@@ -37,6 +37,7 @@ st.pyplot(fig)
 
 
 
+
 DATE_COLUMN = 'Date'
 
 @st.cache_data
