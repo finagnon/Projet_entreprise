@@ -14,7 +14,7 @@ from db import gestDb
 
 # Fonction pour afficher l'en-tête avec le logo
 def show_header():
-    st.image("Logo.png", use_column_width=True)
+    st.image("C:/Users/sylva/OneDrive/Bureau/scrap_project_MD4/Projet_entreprise/Data/Image/Logo.png", use_column_width=True)
     st.title("CLASSIFICATION D'AVIS")
 
 # Fonction pour afficher le pied de page
