@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May 22 14:27:55 2023
-
-@author: finagnon
-"""
 from transformers import pipeline
 import streamlit as st
 import pandas as pd
@@ -14,7 +7,7 @@ from db import gestDb
 
 # Fonction pour afficher l'en-tête avec le logo
 def show_header():
-    st.image("C:/Users/sylva/OneDrive/Bureau/scrap_project_MD4/Projet_entreprise/Data/Image/Logo.png", use_column_width=True)
+    st.image("../../Data/Image/Logo.png", use_column_width=True)
     st.title("CLASSIFICATION D'AVIS")
 
 # Fonction pour afficher le pied de page
@@ -25,7 +18,7 @@ def show_footer():
 # Page de sélection du fichier
 def select_file():
     show_header()
-    st.title("Sélectionnez un fichier")
+    # st.title("Sélectionnez un fichier")
     uploaded_file = st.file_uploader("Choisissez un fichier CSV", type="csv")
     
     if uploaded_file is not None:
@@ -89,17 +82,6 @@ def show_classified_data(classified_data):
      #classified_data = nlp_function(processed_data)  # Exemple : les données classifiées sont identiques aux données traitées
      #processed_data["TYPE"] = processed_data["Description"].apply(lambda x: classify_data(x) if len(x) < 700 else None)
      #return processed_data
-
-
-
-
-
-
-
-
-
-
-
 
 
 def classify_data(data):

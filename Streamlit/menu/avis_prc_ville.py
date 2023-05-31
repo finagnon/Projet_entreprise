@@ -4,7 +4,7 @@ import plotly.graph_objects as go
     
 def avis_prc_ville():    
     # Charger les données des scores des villes d'Île-de-France
-    datafr = pd.read_csv('Data/taux_ville.csv', sep=';')
+    datafr = pd.read_csv('../Data/csv/taux_ville.csv', sep=';')
 
     # Créer une liste des options de sélection pour le dropdown
     villes = datafr['Ville'].unique()

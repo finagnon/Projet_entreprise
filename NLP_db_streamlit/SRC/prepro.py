@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May 22 11:34:50 2023
-
-@author: finagnon
-"""
-
 from transformers import pipeline
 #import re
 from tqdm import tqdm
@@ -22,8 +14,6 @@ def  liref(fichier):
 
         df = pd.read_csv(fichier, sep=';')
         return df
-
-
 
 """
 def nlp_pipeline(text):
@@ -47,8 +37,6 @@ def nlp_pipeline(text):
 
     return text
 """
-
-
 
 def process_data(df):
         
@@ -173,11 +161,7 @@ def nlp_function(avi):
                                 return 'Positif'
               
                                 
-
-                        
-        
-                
-                                        
+                                  
         
         """
         data1 = {"Date de publication":publication, 'AVI':av,'SCORE':score, 'TYPE':tp}
@@ -186,10 +170,3 @@ def nlp_function(avi):
         data2 = [df, df1]
         return data2
 """
-
-
-
-
-
-
-

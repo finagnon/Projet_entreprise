@@ -5,7 +5,7 @@ import streamlit as st
 
 
 def etoile_periode():
-    dfm = pd.read_csv('Data/Île-de-France_POLE_EMPLOI_copie.csv', sep=';')
+    dfm = pd.read_csv('../Data/csv/Île-de-France_POLE_EMPLOI_copie.csv', sep=';')
     st.subheader('Nombre Etoiles par période')
 
     # Convertir les valeurs float en str dans la colonne "Date"
