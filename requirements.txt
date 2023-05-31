@@ -4,3 +4,10 @@ streamlit
 tqdm
 nltk
 neattext
+folium
+datetime
+webbrowser
+base64
+matplotlib
+plotly
+geopandas

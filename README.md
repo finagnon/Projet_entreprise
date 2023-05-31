@@ -23,25 +23,7 @@ Pour effectuer certaines taches, nous avons recuperé et stocké les csv region.
 # regions_liens.csv (contenant les liens des regions), services.csv (contenant tous les servivces)
 
 
-<<<<<<< HEAD
-# **************ETAPES : *************************************************
- ------>Les fichiers à exectuer par étapes:
-            fichier: "services.ipynb" = pour afficher tous les services qui feront l'objet du travail
-            fichier : "scrapperNomLien.ipynb = pour récuperer les liens et les stockés "Nb: ça se fait automatiquement"
-            fichier : "scrapping.ipynb = pour recuperer le csv d'un service selon la region défini.
 
-*******************************LES BIBLIOTHEQUES ******************************************
-## Nous avons utilisé ces bibliothèques pour faire le scraping:
-
-# selenium
-    -->ce qui nous permet d'automatiser les actions sur les navigations web et extraire les données.
-# BeautifulSoup
-    --> nous permet d'extraire les données à partir de goggle reviews.
-# pandas
-    --> nous permet de lire les fichier csv
-
-
-=======
 # ******************************* LES ETAPES *******************************
  ------>Les fichiers à exectuer par étapes:  
 - `servics.ipynb` : permet d'extraire le nom de tous les services qui sont dans le fichier `./Data/export-experiences.csv`  
@@ -54,7 +36,6 @@ Avant de commencer à lancer tous ses fichiers, assurez-vous d'avoir installer l
 - Activer l'environnement `.venv\Scripts\Activate` - N'oubliez pas de changer le nom `.venv`  si c'est pas le cas chez vous)
 - Exécuter la commandes : `pip install -r requirements.txt` pour installer les resources
 - Lancer le fichier `scrapping.ipynb` qui permet de scrapper tous les services.
->>>>>>> 5bc910f91159a059a51c3a5db123bdb2f1eed7f5
 
 
 
