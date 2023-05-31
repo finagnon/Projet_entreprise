@@ -2,16 +2,21 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import geopy.geocoders as geocoders
-from geopy.extra.rate_limiter import RateLimiter
+# import geopy.geocoders as geocoders
+# from geopy.extra.rate_limiter import RateLimiter
 import geopandas as gpd
 # import folium
+<<<<<<< HEAD
 from geopy.geocoders import Nominatim
+=======
+# from geopy.geocoders import Nominatim
+>>>>>>> f2dd60c57f4693b81756c8c018e5b1fc8f29158f
 import plotly.graph_objects as go
 import matplotlib.dates as mdates
 from PIL import Image
-import plotly.graph_objects as go
+import plotly.graph_objects as goa
 import webbrowser
+<<<<<<< HEAD
 import base64
 from io import BytesIO
 import datetime
@@ -19,12 +24,27 @@ from plotly.subplots import make_subplots
 import plotly.express as px
 
 
+=======
+from menu.score_ville import score_ville
+from menu.avis_prc_ville import avis_prc_ville
+from menu.qual_serv_ville import qual_serv_ville
+# import base64
+# from io import BytesIO
+# import datetime
+from menu.etoile_periode import etoile_periode
+from menu.tab_data import tab_data
+from menu.pourcentage_etoiles import prc_etoile
+from menu.accueil import accueil
+>>>>>>> f2dd60c57f4693b81756c8c018e5b1fc8f29158f
 
 
 
 def main():
+<<<<<<< HEAD
     
       
+=======
+>>>>>>> f2dd60c57f4693b81756c8c018e5b1fc8f29158f
     # Déplacer st.set_page_config() comme première commande Streamlit
     st.set_page_config(page_title="Projet-Entreprise", page_icon="🧊")
     
@@ -36,7 +56,11 @@ def main():
     }
 
     .stApp {
+<<<<<<< HEAD
         background-color: #ffffff /* Couleur de la barre de menu */
+=======
+        background-color: #FFFFFF /* Couleur de la barre de menu */
+>>>>>>> f2dd60c57f4693b81756c8c018e5b1fc8f29158f
     }
     
     .sidebar .sidebar-content {
@@ -48,23 +72,25 @@ def main():
 
     # Afficher le style CSS personnalisé
     st.markdown(background_css, unsafe_allow_html=True)
-
-    
-    
-
-    def ouvrir_page(url):
-        webbrowser.open(url)
   
+<<<<<<< HEAD
     data = load_data(2336)  
     data = pd.read_csv('../Data/csv/Île-de-France_POLE EMPLOI.csv', sep=';')
 
 
+=======
+    # data = load_data(2336)  
+    data = pd.read_csv('Data/Île-de-France_POLE EMPLOI.csv', nrows=2336, sep=';')
+    data['Date'] = pd.to_datetime(data['Date'])
+>>>>>>> f2dd60c57f4693b81756c8c018e5b1fc8f29158f
     st.sidebar.header("Menu")
+    
+    # data = pd.read_csv('Data/Île-de-France_POLE EMPLOI.csv', sep=';')
 
     selected_option = st.sidebar.selectbox("Choisir une option", ["Accueil", "Pourcentages des Etoiles" ,"Tableau de données", "Nombre d'avis positifs par ville /année", "Qualité de services par Ville","Taux des avis par ville en %", "Les Scores par ville", "Carte des agences"])
 
-
     if selected_option == "Accueil":
+<<<<<<< HEAD
         # Charger et afficher l'image 
         image_icon = Image.open("C:/Users/sylva/OneDrive/Bureau/scrap_project_MD4/Projet_entreprise/Data/Image/RF.png")      
         width, height = 100, 100
@@ -79,35 +105,17 @@ def main():
     
         st.markdown("<h1 style='color: #191970;'>Bienvenue dans Projet Entreprise</h1>", unsafe_allow_html=True)
         # pass
+=======
+        accueil()
+>>>>>>> f2dd60c57f4693b81756c8c018e5b1fc8f29158f
     
     elif selected_option == "Pourcentages des Etoiles":
-        st.markdown("<h2 style='color: #191970;'>Somme des Etoiles en Pourcentage</h2>", unsafe_allow_html=True)
-
-        Labels = ['1 étoile', '2 étoiles', '3 étoiles', '4 étoiles', '5 étoiles']
-        sizes = [1305, 104, 131, 154, 616]
-        color = ['#ff0000', '#ffa700', '#fff400', '#a3ff00', '#2cba00']
-        explode = (0.05, 0.05, 0.05, 0.05)
-
-        fig1, ax1 = plt.subplots()
-        ax1.pie(sizes, colors=color, labels=Labels, autopct='%1.1f%%', startangle=90)
-        # draw circle
-        centre_circle = plt.Circle((0, 0), 0.70, fc='white')
-        fig = plt.gcf()
-        fig.gca().add_artist(centre_circle)
-        # Equal aspect ratio ensures that pie is drawn as a circle
-        ax1.axis('equal')
-        plt.tight_layout()
-        st.pyplot(fig)  
-    
+        prc_etoile()
     
     elif selected_option == "Tableau de données":
-        data_load_state = st.text('Chargement des données...')
-        data = load_data(2337)
-        data_load_state.text("Chargement terminé")
-
-        st.subheader('Les Données')
-        st.write(data)
+        tab_data()
         
+<<<<<<< HEAD
     elif selected_option == "Nombre d'avis positifs par ville /année":
         
         # Charger les données depuis le fichier CSV
@@ -351,31 +359,36 @@ def main():
         # Afficher les graphiques
         st.plotly_chart(fig_avis, use_container_width=True)
      
+=======
+    elif selected_option == "Nombre d'étoiles par période":
+        etoile_periode()
+        
+    elif selected_option == "Qualité de services par Ville":
+        qual_serv_ville()
+
+    elif selected_option == "Total avis en % par ville":
+       avis_prc_ville()
+        
+    elif selected_option == "Les Scores par ville":
+        score_ville()
+>>>>>>> f2dd60c57f4693b81756c8c018e5b1fc8f29158f
 
     elif selected_option == "Carte des agences":
         # URL de la page de la carte des agences
-        carte_url = 'file:///C:/Users/sylva/OneDrive/Bureau/scrap_project_MD4/Projet_entreprise/Streamlit/carte_pole_emploi.html'
-        # Ouvrir automatiquement la page
-        ouvrir_page(carte_url)
+        webbrowser.open('file:///carte_pole_emploi.html')
 
-        
 
+<<<<<<< HEAD
 def load_data(nrows):
     data = pd.read_csv('../Data/csv/Île-de-France_POLE_EMPLOI_copie.csv', nrows=nrows, sep=';')
     data['Date'] = pd.to_datetime(data['Date'])
     return data
+=======
+# def load_data(nrows):
+#     data = pd.read_csv('Data/Île-de-France_POLE_EMPLOI_copie.csv', nrows=nrows, sep=';')
+#     data['Date'] = pd.to_datetime(data['Date'])
+#     return data
+>>>>>>> f2dd60c57f4693b81756c8c018e5b1fc8f29158f
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
-
-
-
