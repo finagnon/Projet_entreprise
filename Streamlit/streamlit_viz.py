@@ -25,7 +25,7 @@ from menu.etoile_periode import etoile_periode
 from menu.tab_data import tab_data
 from menu.pourcentage_etoiles import prc_etoile
 from menu.accueil import accueil
-# from ..Nlp.api2 import api2
+# from .Nlp.api2 import api2
 
 
 def main():
