@@ -34,25 +34,27 @@ def main():
     st.set_page_config(page_title="Projet-Entreprise", page_icon="🧊")
     
     # Définir le style CSS pour l'arrière-plan
-    background_css = """
-    <style>
-    body {
-        background-color: green; /* Couleur d'arrière-plan */
-    }
+    background_css = (
+        """
+        <style>
+        body {
+            background-color: green; /* Couleur d'arrière-plan */
+        }
 
-    .stApp {
+        .stApp {
 
-        background-color: #ffffff /* Couleur de la barre de menu */
+            background-color: #ffffff /* Couleur de la barre de menu */
 
-        background-color: #FFFFFF /* Couleur de la barre de menu */
-    }
-    
-    .sidebar .sidebar-content {
-        background-color: #C0C0C0; /* Couleur de fond du menu à gauche de l'écran */
-    }
+            background-color: #FFFFFF /* Couleur de la barre de menu */
+        }
+        
+        .sidebar .sidebar-content {
+            background-color: #C0C0C0; /* Couleur de fond du menu à gauche de l'écran */
+        }
 
-    </style>
-    """
+        </style>
+        """
+    )
 
     # Afficher le style CSS personnalisé
     st.markdown(background_css, unsafe_allow_html=True)
@@ -68,7 +70,7 @@ def main():
     
     # data = pd.read_csv('Data/Île-de-France_POLE EMPLOI.csv', sep=';')
 
-    selected_option = st.sidebar.selectbox("Choisir une option", ["Accueil", "Pourcentages des Etoiles" ,"Tableau de données", "Nombre d'avis positifs par ville /année", "Qualité de services par Ville","Taux des avis par ville en %", "Les Scores par ville", "Entrainement du modèle NLP", "Carte des agences"])
+    selected_option = st.sidebar.selectbox("", ["Accueil", "Pourcentages des Etoiles" ,"Tableau de données", "Nombre d'avis positifs par ville /année", "Qualité de services par Ville","Taux des avis par ville en %", "Les Scores par ville", "Entrainement du modèle NLP", "Carte des agences"])
 
     if selected_option == "Accueil":
         accueil()
