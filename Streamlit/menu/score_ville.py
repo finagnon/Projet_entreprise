@@ -3,12 +3,20 @@ import streamlit as st
 import plotly.graph_objects as go   
     
 def score_ville():
+<<<<<<< HEAD
     datafr = pd.read_csv('../Data/csv/taux_ville.csv', sep=';')
+=======
+    datafr = pd.read_csv('Data/taux_ville.csv', sep=';')
+>>>>>>> main
     # Créer une liste des options de sélection pour le dropdown
     villes = datafr['Ville'].unique()
 
     # Sélection de la ville via le dropdown
+<<<<<<< HEAD
     selected_ville = st.selectbox('Sélectionnez une ville', villes)
+=======
+    selected_ville = st.selectbox('Sélectionner une ville', villes)
+>>>>>>> main
 
     # Filtrer les données pour la ville sélectionnée
     ville_data = datafr[datafr['Ville'] == selected_ville]

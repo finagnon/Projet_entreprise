@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pandas==2.0.2
 matplotlib==3.7.1
 selenium==4.9.1
@@ -17,3 +18,18 @@ web-browser==0.0.1
 sqlalchemy==2.0.15
 db==0.1.1
 process-data==0.3
+=======
+pandas
+transformers
+streamlit
+tqdm
+nltk
+neattext
+folium
+datetime
+webbrowser
+base64
+matplotlib
+plotly
+geopandas
+>>>>>>> main
