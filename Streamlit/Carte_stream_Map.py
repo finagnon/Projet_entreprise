@@ -7,16 +7,20 @@ from geopy.geocoders import Nominatim
 data = pd.read_csv('../Data/csv/Île-de-France_POLE_EMPLOI_copie.csv', sep=';')
 
 # Créer une carte centrée sur l'Île-de-France
-map = folium.Map(location=[48.8566, 2.3522], zoom_start=11)
+map = folium.Map(location=[48.8566, 2.3522], zoom_start=12)
 
 # Géocoder les adresses pour obtenir les coordonnées géographiques
 geolocator = Nominatim(user_agent='my_app')
 
 # Obtenir les villes uniques et les localisations uniques
-# villes_uniques = data['Ville'].unique()
 localisations_uniques = data['Localisation'].unique()
 
-# print(localisations_uniques)
+couleurs_legende = {
+    'Moins de 2': 'red',
+    'De 2 à 3': 'blue',
+    'De 3 à 5': 'green',
+    'Plus de 5': 'yellow'
+}
 
 # moyenne par ville des étoiles
 moyennes_par_ville = data.groupby('Localisation')['Etoile'].mean()
@@ -36,16 +40,31 @@ for localisation in localisations_uniques:
         if moyenne_etoiles < 2:
             couleur = 'red'
         elif 2 <= moyenne_etoiles < 3:
-            couleur = 'bleu'
+            couleur = 'blue'
         elif 3 <= moyenne_etoiles <= 5:
             couleur = 'green'
         else:
-            couleur = 'black'
+            couleur = 'yellow'
             
-        # Créer un marqueur à la position du Pôle Emploi avec le nom de la ville en tant qu'étiquette
-        html = f'<span style="color:{couleur}">Pôle Emploi - {localisation}</span>'
-        folium.Marker(location=[latitude, longitude], popup='Pôle Emploi - {} \nmoyenne étoiles {}'.format(localisation, moyenne_etoiles)).add_to(map)
+        folium.Marker(
+            location=[latitude, longitude],
+            # radius=5,
+            color=couleur,
+            icon=folium.Icon(color=couleur),
+            fill=True,
+            # fill_color=couleur,
+            popup='Pôle Emploi - {} \nmoyenne étoiles {:.2f}'.format(localisation, moyenne_etoiles)
+        ).add_to(map)
+    
+# Créer un marqueur circulaire à la position du Pôle Emploi avec le nom de la localisation en tant qu'étiquette
+# for legende, couleur in couleurs_legende.items():
+#     folium.Marker(
+#         location=[48.8566, 2.3522],  # Coordonnées arbitraires
+#         icon=folium.Icon(color=couleur),
+#         popup=legende
+#     ).add_to(map)
 
+        
 # Convertir la carte Folium en HTML
 map_html = map._repr_html_()
 
