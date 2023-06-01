@@ -99,8 +99,9 @@ def main():
     elif selected_option == "Total avis en % par ville":
        avis_prc_ville()
        
-    elif selected_option == "Entrainement du modèle NLP":
+    elif selected_option == "Classification de modèle":
         st.title("CLASSIFICATION D'AVIS")
+        
             
     elif selected_option == "Carte des agences":
         # URL de la page de la carte des agences
