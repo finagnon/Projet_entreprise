@@ -4,10 +4,17 @@ import plotly.graph_objects as go
 
 def qual_serv_ville():
     # Charger les données depuis le fichier CSV
+<<<<<<< HEAD
+    df = pd.read_csv('../Data/csv/taux_ville.csv', sep=';')
+
+    # Sélection de la colonne "Ville" via le dropdown
+    selected_ville = st.selectbox('Sélectionnez une ville', df['Ville'].unique())
+=======
     df = pd.read_csv('Data/taux_ville.csv', sep=';')
 
     # Sélection de la colonne "Ville" via le dropdown
     selected_ville = st.selectbox('Sélectionner une ville', df['Ville'].unique())
+>>>>>>> main
 
     # Filtrer les données pour la ville sélectionnée
     ville_data = df[df['Ville'] == selected_ville]

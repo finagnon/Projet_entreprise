@@ -24,7 +24,11 @@ Pour effectuer certaines taches, nous avons recuperé et stocké les csv region.
 
 
 
+<<<<<<< HEAD
+# ****************************** LES ETAPES *******************************
+=======
 # ******************************* LES ETAPES *******************************
+>>>>>>> main
  ------>Les fichiers à exectuer par étapes:  
 - `servics.ipynb` : permet d'extraire le nom de tous les services qui sont dans le fichier `./Data/export-experiences.csv`  
 - `scrapperNomLien.ipynb` : permet de recherche tous les 13 regions de France qui sont dans le fichier `./Data/regions.csv`, récuperer leurs `URL`et les enregistres maintenant dans le fichier `regions_liens.csv`
@@ -36,7 +40,10 @@ Avant de commencer à lancer tous ses fichiers, assurez-vous d'avoir installer l
 - Activer l'environnement `.venv\Scripts\Activate` - N'oubliez pas de changer le nom `.venv`  si c'est pas le cas chez vous)
 - Exécuter la commandes : `pip install -r requirements.txt` pour installer les resources
 - Lancer le fichier `scrapping.ipynb` qui permet de scrapper tous les services.
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> main

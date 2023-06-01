@@ -7,8 +7,6 @@ nltk.download('punkt')
 import neattext.functions as nfx
 
 
-
-
 #Fonction de lecture du fichier
 def  liref(fichier):
 

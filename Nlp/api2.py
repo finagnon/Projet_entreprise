@@ -5,9 +5,10 @@ from prepro import process_data, nlp_function
 from tqdm import tqdm
 from db import gestDb
 
+
 # Fonction pour afficher l'en-tête avec le logo
 def show_header():
-    st.image("../../Data/Image/Logo.png", use_column_width=True)
+    st.image("../Data/Image/Logo.png", use_column_width=True)
     st.title("CLASSIFICATION D'AVIS")
 
 # Fonction pour afficher le pied de page
@@ -42,11 +43,11 @@ def select_file():
             #data_pre2 = data_pre[ : 10]
             # Bouton pour classer les avis
             #if st.button("Classer les avis"):
-              #data_pre1 =  classify_data(data_pre2)
+            #data_pre1 =  classify_data(data_pre2)
 
                 #classified_data = classify_data(data_pre)
                 # Affichage du résultat sur une nouvelle page
-              #show_classified_data(data_pre1)
+            #show_classified_data(data_pre1)
 
 
 
@@ -79,9 +80,9 @@ def show_classified_data(classified_data):
 
 # Fonction pour classer les avis
 #def classify_data(processed_data):
-     #classified_data = nlp_function(processed_data)  # Exemple : les données classifiées sont identiques aux données traitées
-     #processed_data["TYPE"] = processed_data["Description"].apply(lambda x: classify_data(x) if len(x) < 700 else None)
-     #return processed_data
+    #classified_data = nlp_function(processed_data)  # Exemple : les données classifiées sont identiques aux données traitées
+    #processed_data["TYPE"] = processed_data["Description"].apply(lambda x: classify_data(x) if len(x) < 700 else None)
+    #return processed_data
 
 
 def classify_data(data):
@@ -140,18 +141,6 @@ def classify_data(data):
     df = pd.DataFrame(Data)
     df.to_csv("avi.csv")
     return df
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

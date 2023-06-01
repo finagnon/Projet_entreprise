@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May 22 08:32:27 2023
-
-@author: finagnon
-"""
-
 import csv
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, Date
 from sqlalchemy.ext.declarative import declarative_base
@@ -13,7 +5,6 @@ from sqlalchemy.orm import sessionmaker
 
 
 def gestDb(file):
-        
         
         # Création de la base de données
         engine = create_engine('sqlite:///AVI.db', echo=True)
