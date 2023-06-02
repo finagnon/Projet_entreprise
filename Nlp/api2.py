@@ -4,12 +4,22 @@ import pandas as pd
 from prepro import process_data, nlp_function
 from tqdm import tqdm
 from db import gestDb
+import webbrowser
 
 
+
+
+    
 # Fonction pour afficher l'en-tête avec le logo
 def show_header():
     st.image("../Data/Image/Logo.png", use_column_width=True)
     st.title("CLASSIFICATION D'AVIS")
+    
+    if st.button("Retour"):
+        # Ouvrir l'URL de l'autre application Streamlit dans un nouvel onglet
+        other_app_url = "http://localhost:8501"  # Remplacez par l'URL de l'autre application Streamlit
+        webbrowser.open_new_tab(other_app_url)
+
 
 # Fonction pour afficher le pied de page
 def show_footer():

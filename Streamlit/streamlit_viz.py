@@ -25,6 +25,11 @@ from menu.etoile_periode import etoile_periode
 from menu.tab_data import tab_data
 from menu.pourcentage_etoiles import prc_etoile
 from menu.accueil import accueil
+# from menu.test import test
+
+
+ 
+# from menu.api2 import api2
 # from .Nlp.api2 import api2
 
 
@@ -70,7 +75,7 @@ def main():
     
     # data = pd.read_csv('Data/Île-de-France_POLE EMPLOI.csv', sep=';')
 
-    selected_option = st.sidebar.selectbox("", ["Accueil", "Pourcentages des Etoiles" ,"Tableau de données", "Nombre d'avis positifs par ville /année", "Qualité de services par Ville","Taux des avis par ville", "Les Scores par ville", "Entrainement du modèle NLP", "Carte des agences"])
+    selected_option = st.sidebar.selectbox("", ["Accueil", "Pourcentages des Etoiles" ,"Tableau de données", "Nombre d'avis positifs par ville /année", "Qualité de services par Ville","Taux des avis par ville", "Les Scores par ville","Entrainement du modèle NLP", "Carte des agences"])
 
     if selected_option == "Accueil":
         accueil()
@@ -99,11 +104,18 @@ def main():
     elif selected_option == "Total avis en % par ville":
        avis_prc_ville()
        
-    # elif selected_option == "":
-    #     etoile_pr_ville()
+    # elif selected_option == "Taux etoile par ville":
+    #     test()
+        
+        
+        
        
     elif selected_option == "Entrainement du modèle NLP":
-        st.title("CLASSIFICATION D'AVIS")
+        # st.title("CLASSIFICATION D'AVIS")
+        webbrowser.open('http://localhost:8504/')
+        
+        
+        
         
             
     elif selected_option == "Carte des agences":
