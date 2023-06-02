@@ -1,6 +1,6 @@
 
 #from  api2 import api2
-from Streamlit.api2 import*
+from api2 import *
 import streamlit as st
 
 # Fonction principale pour exécuter l'application
