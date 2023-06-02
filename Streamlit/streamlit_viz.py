@@ -70,7 +70,7 @@ def main():
     
     # data = pd.read_csv('Data/Île-de-France_POLE EMPLOI.csv', sep=';')
 
-    selected_option = st.sidebar.selectbox("", ["Accueil", "Pourcentages des Etoiles" ,"Tableau de données", "Nombre d'avis positifs par ville /année", "Qualité de services par Ville","Taux des avis par ville en %", "Les Scores par ville", "Entrainement du modèle NLP", "Carte des agences"])
+    selected_option = st.sidebar.selectbox("", ["Accueil", "Pourcentages des Etoiles" ,"Tableau de données", "Nombre d'avis positifs par ville /année", "Qualité de services par Ville","Taux des avis par ville", "Les Scores par ville", "Entrainement du modèle NLP", "Carte des agences"])
 
     if selected_option == "Accueil":
         accueil()
@@ -87,7 +87,7 @@ def main():
     elif selected_option == "Qualité de services par Ville":
         qual_serv_ville()
         
-    elif selected_option == "Taux des avis par ville en %":
+    elif selected_option == "Taux des avis par ville":
         avis_prc_ville()
         
     elif selected_option == "Les Scores par ville":
@@ -99,7 +99,10 @@ def main():
     elif selected_option == "Total avis en % par ville":
        avis_prc_ville()
        
-    elif selected_option == "Classification de modèle":
+    # elif selected_option == "":
+    #     etoile_pr_ville()
+       
+    elif selected_option == "Entrainement du modèle NLP":
         st.title("CLASSIFICATION D'AVIS")
         
             

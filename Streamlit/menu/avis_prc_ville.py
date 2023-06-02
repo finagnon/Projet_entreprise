@@ -8,6 +8,8 @@ def avis_prc_ville():
 
     # Créer une liste des options de sélection pour le dropdown
     villes = datafr['Ville'].unique()
+    
+    st.markdown("<h6>La répartition des avis par ville et l’observation des préférences et opinions des utilisateurs. La visualisation claire des proportions relatives des avis positifs, négatifs et neutres, facilitant ainsi la détection de tendances et de disparités entre les villes en termes de satisfaction des services.</h6>", unsafe_allow_html=True)
 
     # Sélection de la ville via le dropdown
     selected_ville = st.selectbox('Sélectionnez une ville', villes)

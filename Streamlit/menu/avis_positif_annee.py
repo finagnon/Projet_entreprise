@@ -15,6 +15,7 @@ def avis_positif_annee():
     # Récupérer toutes les années du CSV
     annees = df['Year'].unique()
 
+    st.markdown("<h6 >Visualisation de l'évolution des avis positifs au fil des années et comparaison des différentes villes. L’analyse sur la satisfaction des utilisateurs dans chaque ville.Les variations temporelles et géographiques des avis positifs.</h6>", unsafe_allow_html=True)
     # Sélection de la ville via le dropdown
     selected_ville = st.selectbox('Sélectionnez une ville', df['Ville'].unique())
 
@@ -27,7 +28,7 @@ def avis_positif_annee():
     
 
     # Mise en forme du layout du graphique
-    fig.update_layout(title=f'Nombre d\'avis positifs par année pour la ville : {selected_ville}',
+    fig.update_layout(title=f'Représentation du nombre d\'avis positifs par année pour la ville : {selected_ville}',
                     
                     
                     yaxis_title='Nombre d\'avis positifs')

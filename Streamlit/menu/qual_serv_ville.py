@@ -5,6 +5,8 @@ import plotly.graph_objects as go
 def qual_serv_ville():
     # Charger les données depuis le fichier CSV
     df = pd.read_csv('../Data/csv/taux_ville.csv', sep=';')
+    
+    st.markdown("<h6 >Représentation de la qualité des services par villes en fonction des avis. Perception des utilisateurs et l’identification des villes ayant les meilleurs et les moins bons résultats en termes de satisfaction des services. Analyse comparative et mise en évidence des variations entre les différentes localités.</h6>", unsafe_allow_html=True)
 
     # Sélection de la colonne "Ville" via le dropdown
     selected_ville = st.selectbox('Sélectionnez une ville', df['Ville'].unique())

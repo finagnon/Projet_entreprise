@@ -6,6 +6,9 @@ def score_ville():
     datafr = pd.read_csv('../Data/csv/taux_ville.csv', sep=';')
     # Créer une liste des options de sélection pour le dropdown
     villes = datafr['Ville'].unique()
+    
+    
+    st.markdown("<h6>Représentation visuelle des quantités d'avis positifs, négatifs et neutres dans chaque ville à travers des données brutes. Etablir une étude approfondie pour identifier les tendances et les disparités entres les villes en termes de satisfaction de services.</h6>", unsafe_allow_html=True)
 
     # Sélection de la ville via le dropdown
     selected_ville = st.selectbox('Sélectionnez une ville', villes)
