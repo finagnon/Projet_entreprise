@@ -3,7 +3,7 @@ import streamlit as st
 
 # Fonction pour afficher l'en-tête avec le logo
 def show_header():
-    st.image("./Image/Logo.png", use_column_width=True)
+    st.image("Image/Logo.png", use_column_width=True)
     st.title("CLASSIFICATION D'AVIS")
 
 # Fonction pour afficher le pied de page

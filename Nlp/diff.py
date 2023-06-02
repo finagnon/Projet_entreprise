@@ -9,7 +9,7 @@ def positif_avis(data):
     return data
 
 
-
+#designation des labels
 def assign_label(comment):
         
 

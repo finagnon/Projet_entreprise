@@ -6,14 +6,14 @@ Created on Mon May 22 14:27:55 2023
 @author: finagnon
 """
 from transformers import pipeline
-from Nlp.show_me import * 
+from show_me import * 
 import pandas as pd
-from Nlp.nlp import*
-from Nlp.prepro import *
+from nlp import*
+from prepro import *
 from tqdm import tqdm
-from Nlp.diff import *
+from diff import *
 
-from cluster import clust
+
 
 
 # Page de sélection du fichier
