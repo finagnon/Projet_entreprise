@@ -19,7 +19,7 @@ def show_header():
     
     if st.button("Retour"):
         # Ouvrir l'URL de l'autre application Streamlit dans un nouvel onglet
-        other_app_url = "http://localhost:8501"  # Remplacez par l'URL de l'autre application Streamlit
+        other_app_url = "http://localhost:8502"  # Remplacez par l'URL de l'autre application Streamlit
         webbrowser.open_new_tab(other_app_url)
 
 from diff import *

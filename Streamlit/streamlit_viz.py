@@ -75,10 +75,15 @@ def main():
     
     # data = pd.read_csv('Data/Île-de-France_POLE EMPLOI.csv', sep=';')
 
-    selected_option = st.sidebar.selectbox("", ["Accueil", "Pourcentages des Etoiles" ,"Tableau de données", "Nombre d'avis positifs par ville /année", "Qualité de services par Ville","Taux des avis par ville", "Les Scores par ville","Entrainement du modèle NLP", "Carte des agences"])
+    selected_option = st.sidebar.selectbox("", ["Accueil", "Carte des agences", "Pourcentages des Etoiles" ,"Tableau de données", "Nombre d'avis positifs par ville /année", "Qualité de services par Ville","Taux des avis par ville", "Les Scores par ville","Entrainement du modèle NLP"])
 
     if selected_option == "Accueil":
         accueil()
+        
+    elif selected_option == "Carte des agences":
+        
+        # URL de la page de la carte des agences
+        webbrowser.open('carte_pole_emploi.html')
     
     elif selected_option == "Pourcentages des Etoiles":
         prc_etoile()
@@ -118,9 +123,7 @@ def main():
         
         
             
-    elif selected_option == "Carte des agences":
-        # URL de la page de la carte des agences
-        webbrowser.open('carte_pole_emploi.html')
+
 
 
 def load_data(nrows):
