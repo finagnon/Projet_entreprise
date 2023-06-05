@@ -81,7 +81,7 @@ legende_html = """
 
 map.get_root().html.add_child(folium.Element(legende_html))
 
-# Convertir la carte Folium en HTML
+# Convertir la carte Folium en HTML pour l'aaficher
 map_html = map._repr_html_()
 
 # # Afficher la carte dans Streamlit
