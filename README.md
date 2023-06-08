@@ -22,6 +22,8 @@ Nous avons effectuer le calcul des dates de commentaires avec la date d'aujourd'
 Pour effectuer certaines taches, nous avons recuperé et stocké les csv region.csv (contenant la liste des regions de france ),
 regions_liens.csv (contenant les liens des regions), services.csv (contenant tous les servivces)
 
+#Le Dataset principal après scrapping est : Île-de-France_POLE EMPLOI.csv
+
 
 
 # ****************************** LES ETAPES *******************************
