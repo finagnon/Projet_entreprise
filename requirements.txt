@@ -12,7 +12,7 @@ geopy==2.3.0
 folium==0.14.0
 geopandas==0.13.0
 plotly==5.14.1
-pillow==10.0.1
+pillow==10.2.0
 web-browser==0.0.1
 sqlalchemy==2.0.15
 db==0.1.1
